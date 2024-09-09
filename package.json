@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "todo-fullstack",
   "private": true,
   "scripts": {
     "build": "turbo build",
