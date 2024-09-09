@@ -2,7 +2,19 @@ import Image from "next/image";
 import { Button } from "@repo/ui/button";
 import styles from "./page.module.css";
 
-export default function Home() {
+const getExample = async () => {
+  const response = await fetch("http://localhost:3002/", {
+    method: "GET"
+  })
+
+  return await response.json()
+}
+
+export default async function Home() {
+  const example = await getExample()
+
+  console.log(example);
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
