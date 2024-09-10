@@ -1,2 +1,2 @@
-# todo-fullstack
-Fullstack Todo App
+# Todo App Fullstack
+Todo App Fullstack
