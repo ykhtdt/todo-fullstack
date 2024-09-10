@@ -1,4 +1,7 @@
 {
+  "css.customData": [
+    ".vscode/css_custom.json"
+  ],
   "eslint.workingDirectories": [
     {
       "mode": "auto"
