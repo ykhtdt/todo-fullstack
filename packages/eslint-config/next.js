@@ -31,4 +31,8 @@ module.exports = {
     "node_modules/",
   ],
   overrides: [{ files: ["*.js?(x)", "*.ts?(x)"] }],
+  rules: {
+    "quotes": ["error", "double"],
+    "jsx-quotes": ["error", "prefer-double"],
+  }
 };
