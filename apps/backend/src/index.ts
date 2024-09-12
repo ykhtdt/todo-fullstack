@@ -1,15 +1,15 @@
-import { serve } from '@hono/node-server'
-import { Hono } from 'hono'
-import { cors } from 'hono/cors'
+import { serve } from "@hono/node-server"
+import { Hono } from "hono"
+import { cors } from "hono/cors"
 
 const app = new Hono()
 
-app.use('*', cors())
+app.use("*", cors())
 
-app.get('/', (c) => {
+app.get("/", (c) => {
   return c.json({
     ok: true,
-    message: 'Hello Hono!'
+    message: "Hello Hono!"
   })
 })
 
