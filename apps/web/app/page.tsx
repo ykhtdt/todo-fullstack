@@ -1,14 +1,14 @@
-import { Button } from "@repo/ui/components/ui/button";
+import { api } from "~/shared/api";
 
 const getExample = async () => {
-  const response = await fetch("http://localhost:3002/", {
+  const response = await api("abc", {
     method: "GET"
   })
 
-  return await response.json()
+  return response
 }
 
-export default async function Home() {
+const Home = async () => {
   const example = await getExample()
 
   console.log(example);
@@ -19,9 +19,6 @@ export default async function Home() {
         <h1 className="text-xl font-bold mb-2">
           Turborepo & Shadcn/ui
         </h1>
-        <Button>
-          @repo/ui Button
-        </Button>
       </main>
       <footer className="flex flex-col items-center p-4">
         Footer
@@ -29,3 +26,7 @@ export default async function Home() {
     </div>
   );
 }
+
+export const dynamic = "force-dynamic"
+
+export default Home
