@@ -6,6 +6,10 @@ const app = new Hono()
 
 app.use("*", cors())
 
+app.notFound((c) => {
+  return c.text("Custom 404 Message", 404)
+})
+
 app.get("/", (c) => {
   return c.json({
     ok: true,
