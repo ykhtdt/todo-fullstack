@@ -15,7 +15,7 @@ import { Input } from "@repo/ui/components/ui/input"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
-import { signupFormSchema } from "@/pages/signup/model"
+import { signupFormSchema } from "@/pages/signup"
 import { api } from "@/shared/api"
 
 export const Page = () => {
