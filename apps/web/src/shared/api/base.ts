@@ -1,10 +1,10 @@
 import ky from "ky"
 
-import { API_PREFIX_URL } from "~/shared/config";
+import { API_PREFIX_URL } from "@/shared/config";
 import {
   getClientIP,
   NotFoundError,
-} from "~/shared/lib";
+} from "@/shared/lib";
 
 const baseApi = ky.create({
   prefixUrl: API_PREFIX_URL,

@@ -1,4 +1,4 @@
-import { api } from "~/shared/api";
+import { api } from "@/shared/api";
 
 const getExample = async () => {
   const response = await api("abc", {
