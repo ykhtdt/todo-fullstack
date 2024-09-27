@@ -22,7 +22,9 @@ export const Page = () => {
   const form = useForm<z.infer<typeof signupFormSchema>>({
     resolver: zodResolver(signupFormSchema),
     defaultValues: {
-      username: "",
+      email: "",
+      password: "",
+      passwordConfirm: "",
     },
   })
 
@@ -30,7 +32,8 @@ export const Page = () => {
     await api("signup", {
       method: "POST",
       body: {
-        username: values.username
+        email: values.email,
+        password: values.password,
       }
     })
   }
@@ -40,12 +43,38 @@ export const Page = () => {
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
         <FormField
           control={form.control}
-          name="username"
+          name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="username" {...field} />
+                <Input type="email" placeholder="Email" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="password"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Password</FormLabel>
+              <FormControl>
+                <Input type="password" placeholder="Password" autoComplete="new-password" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="passwordConfirm"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Password Confirm</FormLabel>
+              <FormControl>
+                <Input type="password" placeholder="Password Confirm" autoComplete="new-password" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
