@@ -17,6 +17,16 @@ app.get("/", (c) => {
   })
 })
 
+app.post("/signup", async (c) => {
+  const body = await c.req.json()
+  console.log(body)
+
+  return c.json({
+    ok: true,
+    message: "Test"
+  })
+})
+
 const port = 3002
 console.log(`Server is running on port ${port}`)
 
