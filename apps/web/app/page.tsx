@@ -9,9 +9,8 @@ const getExample = async () => {
 }
 
 const Home = async () => {
-  const example = await getExample()
-
-  console.log(example);
+  // const example = await getExample()
+  // console.log(example);
 
   return (
     <div className="relative flex flex-col min-h-screen bg-background">
