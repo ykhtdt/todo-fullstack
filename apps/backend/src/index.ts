@@ -2,7 +2,7 @@ import { serve } from "@hono/node-server"
 import bcrypt from "bcrypt"
 import { Hono } from "hono"
 import { cors } from "hono/cors"
-import db from "~/model/db"
+import db from "~/database"
 
 const app = new Hono()
 
