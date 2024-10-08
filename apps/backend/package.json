@@ -10,12 +10,14 @@
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
     "hono": "^4.5.11",
+    "jsonwebtoken": "^9.0.2",
     "pg": "^8.13.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.7",
     "@types/node": "^20.11.17",
     "@types/pg": "^8.11.10",
     "eslint": "^8",
